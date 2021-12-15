@@ -731,3 +731,14 @@ message EvaluateParserResponse {
   required double              f1             = 1;
   optional double              kbestF1        = 2;
 }
+
+
+// A message for processing a tregex query
+// Allows passing in multiple queries and/or multiple trees
+message TregexRequest {
+  repeated string                  tregex     = 1;
+  repeated FlattenedParseTree      tree       = 2;
+}
+
+message TregexResponse {
+}
