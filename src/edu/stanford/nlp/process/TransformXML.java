@@ -195,9 +195,9 @@ public class TransformXML<T>  {
 
   public TransformXML() {
     try {
-      spf = SAXParserFactory.newInstance();
+      SAXParserFactory spf = SAXParserFactory.newInstance();
       spf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
-      saxParser = spf.newSAXParser();
+      SAXParser saxParser = spf.newSAXParser();
     } catch (Exception e) {
       log.info("Error configuring XML parser: " + e);
       throw new RuntimeException(e);
