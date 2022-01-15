@@ -302,6 +302,8 @@ public class XMLUtils  {
       DocumentBuilderFactory dbf = safeDocumentBuilderFactory();
 
       SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+      factory.setProperty(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+      factory.setProperty(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
       Schema schema = factory.newSchema(schemaFile);
       dbf.setSchema(schema);
 
